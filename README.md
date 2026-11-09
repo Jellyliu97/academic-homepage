@@ -25,20 +25,21 @@ GitHub Pages 的 URL 由**仓库名**决定，不是由设置项决定：
 
 | 仓库 | 角色 | 状态 |
 | --- | --- | --- |
-| `Jellyliu97/Jellyliu97.github.io` | **正式站点**，主页在 `docs/` | 文件已推送；需在 `Settings → Pages` 选 `Deploy from a branch → main / docs` 后生效 |
+| `Jellyliu97/Jellyliu97.github.io` | **正式站点**，主页在仓库根目录（`docs/` 有等价副本） | ✅ Pages 已自动启用，根域名已上线 |
 | `Jellyliu97/academic-homepage`（本仓库） | 源文件 + 项目页镜像 | Pages 已启用，位于 `/academic-homepage/` |
 
-根站点用 `docs/` 作为发布源，好处是：不删除旧 Jekyll 文件、`robots.txt` 与
-`sitemap.xml` 落在真正的根路径（项目页做不到），搜索引擎可直接读取。
+用户站点的 `robots.txt` 与 `sitemap.xml` 落在真正的根路径（项目页做不到），
+搜索引擎可直接读取。`homepage/index.html` 是旧地址 `/homepage/` 的跳转页：
+用户站点启用后该路径会被接管，跳转页保证旧链接不再 404。
 
-> 旧的 `https://jellyliu97.github.io/homepage/` 是另一个独立项目站点，不受此改动影响；
-> 根站点上线后建议顺手访问一次确认仍为 200。
+## 上线状态（无需手动操作）
 
-## 一次性上线步骤
-
-打开 <https://github.com/Jellyliu97/Jellyliu97.github.io/settings/pages>：
-**Build and deployment → Source = `Deploy from a branch` → branch `main`、folder `/docs` → Save**。
-约 1 分钟后访问 `https://jellyliu97.github.io/`。`.nojekyll` 已就位，GitHub 会原样发布静态文件。
+✅ **已完成。** 往 `<username>.github.io` 仓库推送时，GitHub 自动启用了 Pages，
+发布源为 `main / (root)`，`https://jellyliu97.github.io/` 现在直接返回本主页。
+根目录的 `.nojekyll` 禁用了旧模板的 Jekyll 构建（否则会渲染出别人的
+AcademicPages 页面并覆盖主页）；`docs/` 中另存一份等价副本。
+如需查看或切换发布源：<https://github.com/Jellyliu97/Jellyliu97.github.io/settings/pages>，
+把 folder 改成 `/docs` 也能正常显示。
 
 ## 以后怎么同步内容
 
@@ -50,7 +51,8 @@ cd /path/to/Jellyliu97.github.io && git add -A && git commit -m "Sync academic h
 ```
 
 脚本会复制全部文件、把 `https://jellyliu97.github.io/academic-homepage/` 替换为根域名，
-并同步 `images/`。**两个仓库都要提交**，否则线上不会更新。
+并同步 `images/`；**同时写入用户站点仓库的根目录与 `docs/`**（无论 Pages 选哪个发布源都能生效）。
+**两个仓库都要提交**，否则线上不会更新。
 
 ## 本地预览
 

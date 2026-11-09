@@ -13,19 +13,23 @@ if [ -z "$SITE_ROOT" ] || [ ! -d "$SITE_ROOT/.git" ]; then
 fi
 
 SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DEST="$SITE_ROOT/docs"
 ROOT_URL="https://jellyliu97.github.io/"
 PROJECT_URL="https://jellyliu97.github.io/academic-homepage/"
 
-mkdir -p "$DEST"
-for f in index.html stylesheet.css sitemap.xml robots.txt; do
-  sed "s#${PROJECT_URL}#${ROOT_URL}#g" "$SRC/$f" > "$DEST/$f"
+# 用户站点仓库的 Pages 实际发布源是 main / (root)；docs/ 保留一份等价副本，
+# 方便以后把发布源切换成 main / docs。两处都写，避免改设置后线上不更新。
+for TARGET in "" "docs"; do
+  if [ -z "$TARGET" ]; then DEST="$SITE_ROOT"; else DEST="$SITE_ROOT/$TARGET"; fi
+  mkdir -p "$DEST"
+  for f in index.html stylesheet.css sitemap.xml robots.txt; do
+    sed "s#${PROJECT_URL}#${ROOT_URL}#g" "$SRC/$f" > "$DEST/$f"
+  done
+  cp "$SRC/.nojekyll" "$DEST/.nojekyll"
+  mkdir -p "$DEST/images"
+  cp -r "$SRC/images/." "$DEST/images/"
+  echo "已同步到 $DEST"
 done
-cp "$SRC/.nojekyll" "$DEST/.nojekyll"
-mkdir -p "$DEST/images"
-cp -r "$SRC/images/." "$DEST/images/"
 
-echo "已同步到 $DEST"
 echo "规范网址已替换为 $ROOT_URL"
 echo ""
 echo "接下来执行："
