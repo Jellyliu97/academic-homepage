@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Institution emblem placeholder">
+  <rect width="64" height="64" rx="14" fill="#294f5c"/>
+  <path d="M10 26 32 12 54 26" fill="none" stroke="#f4b64e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="13" y="28" width="38" height="3" rx="1.5" fill="#f4b64e"/>
+  <path d="M18 33v14 M27 33v14 M37 33v14 M46 33v14" stroke="#f4b64e" stroke-width="4" stroke-linecap="round"/>
+  <rect x="12" y="49" width="40" height="3" rx="1.5" fill="#f4b64e"/>
+</svg>
