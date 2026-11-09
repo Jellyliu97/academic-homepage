@@ -32,5 +32,6 @@ done
 
 echo "规范网址已替换为 $ROOT_URL"
 echo ""
-echo "接下来执行："
+echo "日常发布建议直接运行 ./deploy.sh（同步 + 提交 + 推送两个仓库一次完成）。"
+echo "若手动提交："
 echo "  cd \"$SITE_ROOT\" && git add -A && git commit -m 'Sync academic homepage' && git push"
