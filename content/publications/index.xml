@@ -15,7 +15,7 @@
   <paper order="7" file="mobicom2026-accspeech.xml" title="General Speech Reconstruction for Voice Calls Using Smartphone's Built-in Accelerometer"/>
   <paper order="8" file="chi2027-beyondmic.xml" title="Beyond the Microphone: Noise-Resilient Speech Interaction Through Smartphone Accelerometers"/>
   <paper order="9" file="tmc2027-vibmic.xml" title="A Noise-Resilient Vibration-Driven Speech Microphone"/>
-  <paper order="10" file="mobicom2027-e2e.xml" title="End-to-End Causal On-Device Speech Reconstruction for Real-Time Communication in Extreme Noise"/>
+  <paper order="10" file="mobicom2027-e2e.xml" title="End-to-End Causal On-Device Speech System for Real-Time Communication in Extreme Noise"/>
   <paper order="11" file="biocom.xml" title="BioCom: Exploring Biometric-Bound Coding for Traceable Voice Communication"/>
   <paper order="12" file="tmc2027-watermark.xml" title="Real-time Watermarking Your Speech (BioCom add Stabilizer)"/>
   <paper order="13" file="imwut2027-deepfake.xml" title="Ultrasound-Assisted Biometric Watermarking Against Face Video Deepfakes"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
 <paper id="mobicom2027-e2e" tags="speech">
-  <title>End-to-End Causal On-Device Speech Reconstruction for Real-Time Communication in Extreme Noise</title>
+  <title>End-to-End Causal On-Device Speech System for Real-Time Communication in Extreme Noise</title>
   <authors></authors>
   <topic>Speech Recovery</topic>
   <venue>MobiCom 2027</venue>
