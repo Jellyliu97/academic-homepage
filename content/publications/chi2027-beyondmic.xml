@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
+<paper id="chi2027-beyondmic" featured="true" tags="speech">
+  <title>Beyond the Microphone: Noise-Resilient Speech Interaction Through Smartphone Accelerometers</title>
+  <authors></authors>
+  <topic>Speech Recovery</topic>
+  <venue>CHI 2027</venue>
+  <role>First Author</role>
+  <note>CCF-A</note>
+  <image>images/paper/chi2027-beyondmic.png</image>
+  <imageAlt>Teaser figure placeholder for CHI 2027</imageAlt>
+</paper>

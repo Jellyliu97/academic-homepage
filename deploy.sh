@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# 改完本仓库的 index.html / CSS / 图片后，运行此脚本即可发布到 https://jellyliu97.github.io/
+# 改完 content/*.xml、stylesheet.css 或图片后，运行此脚本即可发布到 https://jellyliu97.github.io/
+# 脚本会先从 XML 重新生成 index.html，再同步并推送两个仓库。
 # 用法：
 #   ./deploy.sh                                   # 默认同步到同级 ../user-site
 #   ./deploy.sh /path/to/Jellyliu97.github.io "更新了论文列表"
@@ -8,6 +9,14 @@ set -euo pipefail
 SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SITE_ROOT="${1:-$(dirname "$SRC")/user-site}"
 MSG="${2:-Update academic homepage}"
+
+# 0) 每次发布前从 content/*.xml 重建静态页面，避免「改了 XML 却忘了构建」
+PYTHON="${PYTHON:-python}"
+if ! command -v "$PYTHON" >/dev/null 2>&1; then
+  PYTHON=python3
+fi
+"$PYTHON" "$SRC/build.py" --check
+"$PYTHON" "$SRC/build.py"
 
 if [ ! -d "$SITE_ROOT/.git" ]; then
   echo "找不到用户站点仓库：$SITE_ROOT" >&2

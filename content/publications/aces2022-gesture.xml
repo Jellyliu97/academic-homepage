@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
+<paper id="aces2022-gesture" tags="radar">
+  <title>Intelligent Metasurface with Machine Learning for Non-contact Hand Gesture Recognition</title>
+  <authors></authors>
+  <topic>Radar &amp; Metasurface</topic>
+  <venue>ACES 2022</venue>
+  <role>First Author</role>
+  <note>Computational Electromagnetics Top, Oral presentation</note>
+  <image>images/paper/aces2022-gesture.png</image>
+  <imageAlt>Teaser figure placeholder for ACES 2022</imageAlt>
+</paper>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
+<paper id="tmc2026-magnetact" tags="sensing">
+  <title>MagneTact: Utilizing Deformation-Induced Magnetic Field Variation for Tactile Sensing on Smartphones</title>
+  <authors></authors>
+  <topic>Multimodal Sensing</topic>
+  <venue>IEEE Transactions on Mobile Computing (TMC) 2026</venue>
+  <note>CCF-A</note>
+  <image>images/paper/tmc2026-magnetact.png</image>
+  <imageAlt>Teaser figure placeholder for IEEE TMC 2026</imageAlt>
+</paper>

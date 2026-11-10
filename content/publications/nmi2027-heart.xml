@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
+<paper id="nmi2027-heart" tags="recon3d,medical">
+  <title>Follow Your 3D Heart Using Smartphone's Inertial Signals</title>
+  <authors></authors>
+  <topic>3D Reconstruction · AI for Medicine</topic>
+  <venue>Nature Machine Intelligence 2027</venue>
+  <role>First Author</role>
+  <note>TOP, coming soon</note>
+  <image>images/paper/nmi2027-heart.png</image>
+  <imageAlt>Teaser figure placeholder for Nature Mach. Intell. 2027</imageAlt>
+</paper>

@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# 把本仓库的主页同步到 <username>.github.io 用户站点仓库的 docs/ 发布目录。
+# 把本仓库「构建产物」（index.html / CSS / sitemap / robots / 图片）同步到
+# Jellyliu97.github.io 用户站点仓库，并把项目页 URL 替换成根域名。
+# 根目录与 docs/ 各写一份；XML 数据源和 build.py 不需要部署到线上。
 # 用法（在 Git Bash / macOS / Linux 下）：
 #   ./sync-to-root.sh /path/to/Jellyliu97.github.io
-# 同步后脚本会打印后续的 git 提交命令。
+# 日常发布请直接用 ./deploy.sh（它会先运行 build.py，再同步 + 提交 + 推送）。
 set -euo pipefail
 
 SITE_ROOT="${1:-}"

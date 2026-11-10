@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 一条 News = 一个 <item>；date 显示在日期徽标里，正文可直接写 HTML。 -->
+<news>
+  <item date="2026"><![CDATA[I received the &ldquo;HUAWEI&rdquo; Scholarship, Nanjing University.]]></item>
+  <item date="2026"><![CDATA[Our project &ldquo;Monitoring Your Vital Signs Anytime and Anywhere Using Smartphones&rdquo; won the <span class="news-highlight">Outstanding Achievement in Innovation</span> at the 51st International Exhibition of Inventions Geneva (Top 0.1&ndash;0.5%, First Student Author).]]></item>
+  <item date="2026"><![CDATA[Our paper on general speech reconstruction using a smartphone&rsquo;s built-in accelerometer was accepted at <span class="news-highlight">MobiCom 2026</span> (CCF-A, acceptance rate 14%).]]></item>
+  <item date="2026"><![CDATA[Our mmWave-based acoustic eavesdropping paper was accepted at <span class="news-highlight">UbiComp / IMWUT 2026</span> (CCF-A).]]></item>
+  <item date="2026"><![CDATA[Serving as Poster Chair Member on the Executive Committee of <span class="news-highlight">ACM UbiComp 2026</span>.]]></item>
+  <item date="2026"><![CDATA[Selected for the Postgraduate Research &amp; Practice Innovation Program of Jiangsu Province.]]></item>
+</news>

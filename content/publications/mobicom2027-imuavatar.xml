@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
+<paper id="mobicom2027-imuavatar" tags="recon3d">
+  <title>IMUAvatar: IMU-driven Universal Gaussian Head Avatars in Extreme Noise</title>
+  <authors></authors>
+  <topic>3D Reconstruction</topic>
+  <venue>MobiCom 2027</venue>
+  <role>First Author</role>
+  <note>CCF-A, coming soon</note>
+  <image>images/paper/mobicom2027-imuavatar.png</image>
+  <imageAlt>Teaser figure placeholder for MobiCom 2027</imageAlt>
+</paper>

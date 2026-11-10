@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
+<paper id="admt2023-metasureface" featured="true" tags="radar">
+  <title>Indoor Positioning and Posture Recognition of Human Body Applying Integrating-Type Intelligent Metasurfaces Based Sensing System</title>
+  <authors></authors>
+  <topic>Radar &amp; Metasurface</topic>
+  <venue>Advanced Materials Technologies 2023</venue>
+  <role>First Author</role>
+  <note>Q1, IF: 8.856</note>
+  <image>images/paper/admt2023-metasureface.png</image>
+  <imageAlt>Teaser figure placeholder for Adv. Mater. Technol. 2023</imageAlt>
+  <titleUrl>https://doi.org/10.1002/admt.202301006</titleUrl>
+  <links>
+    <link label="Paper" href="https://doi.org/10.1002/admt.202301006"/>
+  </links>
+</paper>

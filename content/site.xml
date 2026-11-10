@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 站点级配置：网址、SEO、导航、筛选标签、页脚。改网址只改 <url> 一处。 -->
+<site>
+  <url>https://jellyliu97.github.io/academic-homepage/</url>
+  <title>Guodong Liu (Eric Liu) | Academic Homepage, Nanjing University</title>
+  <author>Guodong Liu (Eric Liu)</author>
+  <description>Guodong Liu (Eric Liu) is a Ph.D. student in computer science at the State Key Laboratory for Novel Software Technology, Nanjing University. Research on mobile and acoustic sensing, speech reconstruction, mmWave radar, trustworthy voice, embodied intelligence and AI for medicine.</description>
+  <keywords>Guodong Liu, Eric Liu, Nanjing University, State Key Laboratory for Novel Software Technology, academic homepage, mobile sensing, speech reconstruction, accelerometer, mmWave radar, embodied intelligence, AI for medicine, MobiCom, UbiComp, IMWUT, CHI, NSDI</keywords>
+  <robots>index, follow, max-image-preview:large, max-snippet:-1</robots>
+  <themeColor>#294f5c</themeColor>
+  <ogSiteName>Guodong Liu (Eric Liu) - Academic Homepage</ogSiteName>
+  <ogDescription>Ph.D. student at Nanjing University working on sensing, recognition and cognition toward embodied intelligence and AI agents.</ogDescription>
+  <ogImageAlt>Portrait of Guodong Liu (Eric Liu)</ogImageAlt>
+  <twitterTitle>Guodong Liu (Eric Liu) | Academic Homepage</twitterTitle>
+  <twitterDescription>Ph.D. student at Nanjing University. Mobile sensing, speech reconstruction, mmWave radar, embodied intelligence and AI for medicine.</twitterDescription>
+  <inLanguage>en</inLanguage>
+  <lastmod>2026-11-10</lastmod>
+  <lastUpdatedText>November 10, 2026</lastUpdatedText>
+
+  <nav>
+    <item label="About" href="#about"/>
+    <item label="News" href="#news"/>
+    <item label="Publications" href="#publications"/>
+    <item label="Experience" href="#experience"/>
+    <item label="Projects" href="#projects"/>
+    <item label="Service" href="#service"/>
+    <item label="Awards" href="#awards"/>
+    <item label="Contact" href="#contact"/>
+    <item label="CV" href="https://jellyliu97.github.io/cv/" external="true"/>
+  </nav>
+
+ <!-- 论文大类别 -->
+  <filters> 
+    <filter key="all" label="All"/>
+    <filter key="radar" label="Radar &amp; Metasurface"/>
+    <filter key="speech" label="Speech Recovery"/>
+    <filter key="security" label="Audio Security"/>
+    <filter key="recon3d" label="3D Reconstruction"/>
+    <filter key="embodied" label="Embodied AI"/>
+    <filter key="medical" label="AI for Medicine"/>
+    <filter key="sensing" label="Multimodal Sensing"/>
+  </filters>
+
+  <publicationsIntro><![CDATA[<p>Representative papers are
+             <span style="background-color: #FFFEE0;">highlighted</span>.
+             A full citation list is available on
+             <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=ysxUnXsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>]]></publicationsIntro>
+
+  <footer>
+    <title>Keep Exploring</title>
+    <subtitle>From sensing and recognition to embodied intelligence and AI agents.</subtitle>
+    <ctaLabel>Get in Touch</ctaLabel>
+    <footnote><![CDATA[Guodong Liu (Eric Liu) &nbsp;|&nbsp; Nanjing University]]></footnote>
+    <credit><![CDATA[&copy; 2026 Guodong Liu. Content hosted on GitHub Pages.]]></credit>
+  </footer>
+</site>

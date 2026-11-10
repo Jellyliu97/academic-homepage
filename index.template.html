@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>{{site.title}}</title>
+  <meta name="author" content="{{site.author}}">
+  <meta name="description" content="{{site.description}}">
+  <meta name="keywords" content="{{site.keywords}}">
+  <meta name="robots" content="{{site.robots}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="{{site.themeColor}}">
+  <link rel="canonical" href="{{site.url}}">
+  <!-- Search Console verification: add <meta name="google-site-verification" content="YOUR_CODE"> here. -->
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="{{site.ogSiteName}}">
+  <meta property="og:title" content="{{site.title}}">
+  <meta property="og:description" content="{{site.ogDescription}}">
+  <meta property="og:url" content="{{site.url}}">
+  <meta property="og:image" content="{{site.url}}images/portrait.png">
+  <meta property="og:image:alt" content="{{site.ogImageAlt}}">
+  <meta property="profile:first_name" content="{{profile.givenName}}">
+  <meta property="profile:last_name" content="{{profile.familyName}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{site.twitterTitle}}">
+  <meta name="twitter:description" content="{{site.twitterDescription}}">
+  <meta name="twitter:image" content="{{site.url}}images/portrait.png">
+  <script type="application/ld+json">
+{{BLOCK:jsonld}}
+  </script>
+  <style>
+    body, * {
+      cursor: url('images/icon/cursor.png'), auto;
+    }
+    a, a * {
+      cursor: url('images/icon/cursor-pointer.png'), pointer !important;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="site-nav-inner">
+      <span class="site-nav-brand">{{profile.name}}</span>
+      <span class="site-nav-links">
+        {{BLOCK:nav}}
+      </span>
+    </div>
+  </nav>
+
+  <table id="about" class="page-section" style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:68%;vertical-align:middle">
+              {{BLOCK:profileText}}
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <img class="profile-photo" style="width:85%;max-width:85%;border-radius:8px;"
+                   alt="{{profile.photoAlt}}" src="{{profile.photoSrc}}">
+            </td>
+          </tr>
+        </tbody></table>
+
+        <section id="news" class="page-section">
+          <h2 class="section-heading">News</h2>
+          <ul class="news-plain">
+{{BLOCK:news}}
+          </ul>
+        </section>
+
+        <section id="publications" class="page-section">
+          <h2 class="section-heading">Publications</h2>
+          {{BLOCK:publicationsIntro}}
+          <div class="tag-filter" id="tagFilter">
+{{BLOCK:filters}}
+          </div>
+          <table class="publications-table" style="width:100%;border:0px;border-spacing:0 16px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+{{BLOCK:papers}}
+          </tbody></table>
+        </section>
+
+        <script>
+          // Inject publication counts and wire the research-topic filter.
+          document.addEventListener('DOMContentLoaded', function() {
+            const rows = document.querySelectorAll('tr[data-tags]');
+            const total = rows.length;
+            document.querySelectorAll('.tag-btn').forEach(function(btn) {
+              const tag = btn.dataset.tag;
+              const count = tag === 'all' ? total : Array.from(rows).filter(r => r.dataset.tags.split(',').includes(tag)).length;
+              btn.insertAdjacentHTML('beforeend', ' <span class="tag-count">(' + count + ')</span>');
+            });
+          });
+
+          document.getElementById('tagFilter').addEventListener('click', function(e) {
+            const btn = e.target.closest('.tag-btn');
+            if (!btn) return;
+            activateTag(btn.dataset.tag);
+          });
+
+          function activateTag(tag) {
+            document.querySelectorAll('.tag-btn').forEach(b => b.classList.toggle('active', b.dataset.tag === tag));
+            document.querySelectorAll('tr[data-tags]').forEach(function(row) {
+              row.style.display = (tag === 'all' || row.dataset.tags.split(',').includes(tag)) ? '' : 'none';
+            });
+          }
+
+          function copyText(text, event) {
+            const showToast = () => {
+              const toast = document.getElementById('toast');
+              if (event) {
+                const margin = 12;
+                const x = Math.min(Math.max(event.clientX, margin), window.innerWidth - margin);
+                const y = Math.min(Math.max(event.clientY, 48), window.innerHeight - margin);
+                toast.style.setProperty('--toast-x', x + 'px');
+                toast.style.setProperty('--toast-y', y + 'px');
+              }
+              toast.classList.add('show');
+              setTimeout(() => toast.classList.remove('show'), 2000);
+            };
+            navigator.clipboard.writeText(text).then(showToast).catch(function(err) {
+              console.error('Copy failed: ', err);
+              const textArea = document.createElement('textarea');
+              textArea.value = text;
+              document.body.appendChild(textArea);
+              textArea.select();
+              try { document.execCommand('copy'); showToast(); } catch (e) { console.error(e); }
+              document.body.removeChild(textArea);
+            });
+          }
+
+          document.getElementById('astronaut-btn').addEventListener('click', function(e) {
+            e.stopPropagation();
+            copyText({{profile.copyBioJs}}, e);
+          });
+          document.getElementById('email-copy').addEventListener('click', function(e) {
+            e.preventDefault();
+            copyText({{profile.primaryEmailJs}}, e);
+          });
+        </script>
+
+        <section id="experience" class="page-section">
+          <h2 class="section-heading">Work and Intern Experiences</h2>
+          <table width="100%" align="center" border="0" cellpadding="10"><tbody>
+{{BLOCK:experience}}
+          </tbody></table>
+        </section>
+
+        <section id="projects" class="page-section">
+          <h2 class="section-heading">Research Projects &amp; Directions</h2>
+          {{BLOCK:projectsBody}}
+          <div id="tagcloud-container">
+            <p class="tagcloud-fallback">Loading research directions...</p>
+          </div>
+        </section>
+
+        <script>
+          (function() {
+            const container = document.getElementById('tagcloud-container');
+            const myProjects = {{projects.cloudJson}};
+
+            function initTagCloud(projects) {
+              container.innerHTML = '';
+              const tags = [];
+              const r = Math.min(container.offsetWidth, container.offsetHeight) / 2 * 0.8;
+              const stretchX = 1.5;
+
+              projects.forEach(function(p) {
+                const el = document.createElement('a');
+                el.href = '#publications';
+                el.className = 'tagcloud-item';
+                el.textContent = p.name;
+                el.style.color = '#444';
+                el.addEventListener('click', function() { activateTag(p.tag); });
+                container.appendChild(el);
+                tags.push({ el: el, x: 0, y: 0, z: 0 });
+              });
+
+              let angleX = 0.002, angleY = 0.002, isHovering = false;
+              const cx = container.offsetWidth / 2;
+              const cy = container.offsetHeight / 2;
+              const len = tags.length;
+              for (let i = 0; i < len; i++) {
+                const phi = Math.acos(-1 + (2 * i + 1) / len);
+                const theta = Math.sqrt(len * Math.PI) * phi;
+                tags[i].x = r * Math.cos(theta) * Math.sin(phi);
+                tags[i].y = r * Math.sin(theta) * Math.sin(phi);
+                tags[i].z = r * Math.cos(phi);
+              }
+
+              let animationId = null, isVisible = true;
+              function rotate() {
+                animationId = null;
+                if (!isVisible) return;
+                if (!isHovering) {
+                  const cosX = Math.cos(angleX), sinX = Math.sin(angleX);
+                  const cosY = Math.cos(angleY), sinY = Math.sin(angleY);
+                  tags.forEach(function(tag) {
+                    let y = tag.y * cosX - tag.z * sinX;
+                    let z = tag.z * cosX + tag.y * sinX;
+                    tag.y = y; tag.z = z;
+                    let x = tag.x * cosY - z * sinY;
+                    z = z * cosY + tag.x * sinY;
+                    tag.x = x; tag.z = z;
+                  });
+                }
+                tags.forEach(function(tag) {
+                  const perspective = 2 * r;
+                  const scale = perspective / (perspective - tag.z);
+                  const alpha = (tag.z + r) / (2 * r);
+                  tag.el.style.left = (cx + tag.x * stretchX) - tag.el.offsetWidth / 2 + 'px';
+                  tag.el.style.top = (cy + tag.y) - tag.el.offsetHeight / 2 + 'px';
+                  tag.el.style.transform = 'scale(' + scale + ')';
+                  tag.el.style.opacity = Math.max(0.2, alpha);
+                  tag.el.style.zIndex = Math.round(scale * 100);
+                });
+                animationId = requestAnimationFrame(rotate);
+              }
+              function setVisible(visible) {
+                isVisible = visible;
+                if (visible && animationId === null) animationId = requestAnimationFrame(rotate);
+              }
+              container.addEventListener('mouseenter', function() { isHovering = true; });
+              container.addEventListener('mouseleave', function() { isHovering = false; });
+              if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(function(entries) {
+                  setVisible(entries[0].isIntersecting);
+                }, { rootMargin: '120px' });
+                observer.observe(container);
+              }
+              setVisible(true);
+            }
+            initTagCloud(myProjects);
+          })();
+        </script>
+
+        <section id="service" class="page-section">
+          <h2 class="section-heading">Service and Teaching</h2>
+          <ul class="detail-list">
+{{BLOCK:service}}
+          </ul>
+        </section>
+
+        <section id="awards" class="page-section">
+          <h2 class="section-heading">Awards and Honors</h2>
+          <ul class="detail-list">
+{{BLOCK:awards}}
+          </ul>
+        </section>
+
+        <section id="contact" class="page-section">
+          <h2 class="section-heading">Contact Me</h2>
+          <ul class="detail-list">
+{{BLOCK:contact}}
+          </ul>
+        </section>
+      </td>
+    </tr>
+  </tbody></table>
+
+  <section class="mountain-footer" aria-label="Footer landscape">
+    <div class="mountain-stage">
+      <picture>
+        <source type="image/webp" srcset="images/experience/background-960.webp 960w, images/experience/background-1440.webp 1440w, images/experience/background-1920.webp 1920w" sizes="100vw">
+        <img class="mountain-img" src="images/experience/background.jpeg" alt="Snowy mountain landscape" loading="lazy" decoding="async" fetchpriority="low"
+             onerror="this.style.display='none'; this.closest('picture').nextElementSibling.style.display='block';">
+      </picture>
+      <div class="mountain-fallback" style="display:none;"></div>
+      <div class="mountain-content">
+        <h2>{{footer.title}}</h2>
+        <p class="mountain-sub">{{footer.subtitle}}</p>
+        <a href="mailto:{{profile.primaryEmail}}" class="mountain-cta">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <span>{{footer.ctaLabel}}</span>
+        </a>
+        <p class="mountain-footnote">
+          <span>{{footer.footnote}}</span>
+          <span class="mountain-updated">Last updated: <!-- LAST_UPDATED_START -->{{site.lastUpdatedText}}<!-- LAST_UPDATED_END -->.</span>
+          <span class="mountain-template">{{footer.credit}}</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" onclick="scrollToTop()" title="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <div id="toast" class="toast-message">&#9989; Copied to clipboard</div>
+
+  <script>
+    (function() {
+      var btn = document.getElementById('backToTop');
+      var sectionNav = document.querySelector('.section-drip-nav');
+      var footer = document.querySelector('.mountain-footer');
+      function updateSectionNav() {
+        if (!sectionNav || !footer) return;
+        var footerTop = footer.getBoundingClientRect().top;
+        var navBottom = sectionNav.getBoundingClientRect().bottom;
+        sectionNav.classList.toggle('is-footer-visible', footerTop < navBottom + 28);
+      }
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+        updateSectionNav();
+      });
+      window.addEventListener('resize', updateSectionNav);
+      updateSectionNav();
+    })();
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

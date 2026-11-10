@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
+<paper id="mm2027-pose2gait" tags="sensing">
+  <title>Pose2Gait</title>
+  <authors></authors>
+  <topic>Multimodal Sensing</topic>
+  <venue>ACM MM / AAAI 2027</venue>
+  <role>First Author</role>
+  <note>CCF-A, coming soon</note>
+  <image>images/paper/mm2027-pose2gait.png</image>
+  <imageAlt>Teaser figure placeholder for ACM MM / AAAI 2027</imageAlt>
+</paper>

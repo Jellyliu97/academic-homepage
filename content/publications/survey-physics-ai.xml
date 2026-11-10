@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
+<paper id="survey-physics-ai" tags="embodied">
+  <title>From Human-centred Multimodal Sensing to Physics AI: Survey</title>
+  <authors></authors>
+  <topic>Embodied AI</topic>
+  <venue>Survey</venue>
+  <role>First Author</role>
+  <note>CCF-A, coming soon</note>
+  <image>images/paper/survey-physics-ai.png</image>
+  <imageAlt>Teaser figure placeholder for Survey</imageAlt>
+</paper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
+<paper id="advs2022-prosthesis" tags="radar">
+  <title>Non-contact electromagnetic wireless recognition for prosthesis based on intelligent metasurface</title>
+  <authors></authors>
+  <topic>Radar &amp; Metasurface</topic>
+  <venue>Advanced Science 2022</venue>
+  <role>Second Author</role>
+  <note>Q1 Top, IF: 17.521</note>
+  <image>images/paper/advs2022-prosthesis.png</image>
+  <imageAlt>Teaser figure placeholder for Advanced Science 2022</imageAlt>
+  <titleUrl>https://doi.org/10.1002/advs.202105056</titleUrl>
+  <links>
+    <link label="Paper" href="https://doi.org/10.1002/advs.202105056"/>
+  </links>
+</paper>

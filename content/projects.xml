@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 研究项目：一条 <item> = 页面上的一行列表项，可继续往下加。
+     <hint> 是词云上方的居中提示，字体与项目 item 不同（样式见 stylesheet.css 的 .cloud-hint）。
+     <cloud> 里 tag 必须出现在 site.xml 的 <filters> 中（或为 all）。 -->
+<projects>
+  <items>
+    <item date="2026"><![CDATA[Postgraduate Research &amp; Practice Innovation Program of Jiangsu Province (<em>In Research</em>)]]></item>
+  </items>
+  <hint><![CDATA[Click a direction below to filter the publication list]]></hint>
+  <cloud>
+    <item name="Mobile Sensing" tag="sensing"/>
+    <item name="Speech Reconstruction" tag="speech"/>
+    <item name="mmWave Radar" tag="radar"/>
+    <item name="Trustworthy Voice" tag="security"/>
+    <item name="Cardiac Sensing" tag="medical"/>
+    <item name="Metasurface" tag="radar"/>
+    <item name="3D Reconstruction" tag="recon3d"/>
+    <item name="Embodied AI" tag="embodied"/>
+    <item name="AI for Medicine" tag="medical"/>
+    <item name="Multimodal Intelligence" tag="all"/>
+  </cloud>
+</projects>

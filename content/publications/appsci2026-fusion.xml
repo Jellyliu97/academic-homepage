@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
+<paper id="appsci2026-fusion" tags="radar">
+  <title>Acoustic Source Fusion-Based Passive Eavesdropping System Using Millimeter-Wave Radar</title>
+  <authors></authors>
+  <topic>Radar &amp; Metasurface</topic>
+  <venue>Applied Sciences 2026</venue>
+  <image>images/paper/appsci2026-fusion.png</image>
+  <imageAlt>Teaser figure placeholder for Applied Sciences 2026</imageAlt>
+</paper>

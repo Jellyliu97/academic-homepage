@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 新增论文：复制本文件 → 改名为 <slug>.xml → 填字段 → 在 index.xml 末尾登记 → ./deploy.sh
+     规则：
+       · id 必须与文件名（去掉 .xml）完全一致
+       · 页面顺序由 content/publications/index.xml 的行顺序决定，本文件不写 order
+       · 新增后在 index.xml 末尾加一行：<paper file="<slug>.xml" title="Paper title"/>
+       · tags 用逗号分隔，每个键都要出现在 content/site.xml 的 <filters> 里
+       · 以 _ 开头的文件会被 build.py 跳过，所以本模板不会被当成论文
+       · role / note / authors / titleUrl / links 可以留空或整行删掉
+       · <authors> 显示在标题下方；用 CDATA 包起来可以写 HTML
+       · 配图放 images/paper/<slug>.png，与本文件同名 -->
+<paper id="NEW-SLUG" tags="speech,sensing">
+  <title>Paper title goes here</title>
+  <authors><![CDATA[<strong>Guodong Liu</strong>, Jane Doe, John Smith]]></authors>
+  <topic>Speech Recovery</topic>
+  <venue>Venue / Year</venue>
+  <role>First Author</role>
+  <note>CCF-A</note>
+  <image>images/paper/NEW-SLUG.png</image>
+  <imageAlt>Teaser figure placeholder for Venue</imageAlt>
+  <titleUrl>https://doi.org/10.xxxx/xxxxx</titleUrl>
+  <links>
+    <link label="Paper" href="https://doi.org/10.xxxx/xxxxx"/>
+  </links>
+</paper>

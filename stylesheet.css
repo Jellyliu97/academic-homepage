@@ -1112,6 +1112,13 @@ h2.section-heading {
   font-size: 11px;
   letter-spacing: 0.02em;
 }
+.pub-authors {
+  margin: 5px 0 2px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #444;
+}
+.pub-authors strong { color: #294f5c; }
 .pub-meta { font-size: 12px; color: #555; }
 .pub-role { font-weight: 700; color: #8a5c00; }
 .pub-note { color: #666; }
@@ -1127,6 +1134,22 @@ h2.section-heading {
 
 .exp-body { line-height: 1.6; }
 .exp-meta { color: #6e3519; font-size: 13px; }
-.project-note { margin: 0 0 6px; color: #444; }
+.project-list {
+  margin: 0 0 12px;
+  padding-left: 20px;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.project-item { margin-bottom: 5px; }
+.project-date { font-weight: 700; color: #6e3519; margin-right: 4px; }
+.cloud-hint {
+  margin: 8px 0 2px;
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: #8a8a8a;
+}
 .tagcloud-fallback { text-align: center; color: #999; padding-top: 130px; }
 #news, #projects, #service, #awards, #contact { margin-bottom: 22px; }

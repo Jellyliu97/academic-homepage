@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 工作 / 实习经历；<body> 里直接写 HTML（<br>、<strong> 均可）。 -->
+<experience>
+  <item logo="images/university_phd.png" logoAlt="University emblem placeholder">
+    <body><![CDATA[<strong>Nanjing University</strong> &mdash; State Key Laboratory for Novel Software Technology
+                <br> <span class="exp-meta">Current (third-year)</span>
+                <br> <strong>Ph.D. Student in Computer Science</strong>]]></body>
+  </item>
+  <item logo="images/company_1.png" logoAlt="Company emblem placeholder">
+    <body><![CDATA[<strong>Shanghai United Imaging Medical Technology Co., LTD.</strong>
+                <br> <span class="exp-meta">2023.07 &ndash; 2024.06</span>
+                <br> <strong>Software Engineer</strong> &mdash; AI algorithm model research and
+                engineering application development (C++, Python, PyTorch) for medical images,
+                including the development and optimization of ultrasound medical image
+                detection and segmentation models.]]></body>
+  </item>
+</experience>

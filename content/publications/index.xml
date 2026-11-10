@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 论文总清单：这里的行顺序 = 页面上的先后顺序，order 是给人看的编号。
+     · 新增论文：复制 _template.xml → 改名 <slug>.xml → 在下面末尾加一行
+       <paper file="new-slug.xml" title="Paper title"/>
+       order 可以省略（自动按行号编号），写 order="30" 也可以。
+     · 文件名不需要带序号，顺序以本文件为准；论文 XML 里不再写 order。
+     · 总数、编号与标题可用清单命令查看（用法见 content/README.md）。 -->
+<publications>
+  <paper order="1" file="admt2023-metasureface.xml" title="Indoor Positioning and Posture Recognition of Human Body Applying Integrating-Type Intelligent Metasurfaces Based Sensing System"/>
+  <paper order="2" file="advs2022-prosthesis.xml" title="Non-contact electromagnetic wireless recognition for prosthesis based on intelligent metasurface"/>
+  <paper order="3" file="aces2022-gesture.xml" title="Intelligent Metasurface with Machine Learning for Non-contact Hand Gesture Recognition"/>
+  <paper order="4" file="tap2023-doa.xml" title="Joint Detections of Frequency and Direction of Arrival in Wideband Based on Programmable Metasurface"/>
+  <paper order="5" file="ubicomp2026-lam.xml" title="LAM-assisted Acoustic Eavesdropping in Multi-speaker Scenarios via Commercial mmWave Radar"/>
+  <paper order="6" file="appsci2026-fusion.xml" title="Acoustic Source Fusion-Based Passive Eavesdropping System Using Millimeter-Wave Radar"/>
+  <paper order="7" file="mobicom2026-accspeech.xml" title="General Speech Reconstruction for Voice Calls Using Smartphone's Built-in Accelerometer"/>
+  <paper order="8" file="chi2027-beyondmic.xml" title="Beyond the Microphone: Noise-Resilient Speech Interaction Through Smartphone Accelerometers"/>
+  <paper order="9" file="tmc2027-vibmic.xml" title="A Noise-Resilient Vibration-Driven Speech Microphone"/>
+  <paper order="10" file="mobicom2027-e2e.xml" title="End-to-End Causal On-Device Speech Reconstruction for Real-Time Communication in Extreme Noise"/>
+  <paper order="11" file="nsdi2027-biocom.xml" title="BioCom: Exploring Biometric-Bound Coding for Traceable Voice Communication"/>
+  <paper order="12" file="tmc2027-watermark.xml" title="Real-time Watermarking Your Speech (BioCom add Stabilizer)"/>
+  <paper order="13" file="imwut2027-deepfake.xml" title="Ultrasound-Assisted Biometric Watermarking Against Face Video Deepfakes"/>
+  <paper order="14" file="imwut2027-trustworthy.xml" title="Towards Trustworthy Mobile Speech Interaction: Ensuring Voice Authenticity and Transmission Integrity"/>
+  <paper order="15" file="tmc2027-earseal.xml" title="EarSeal: End-to-End Speech Integrity via In-Ear Vocal-Biometric Consistency and Watermarking"/>
+  <paper order="16" file="mobicom2027-inheart.xml" title="InHeart: Exploring 3D Cardiac Anatomy Reconstruction from Smartphone Inertial Sensing"/>
+  <paper order="17" file="nmi2027-heart.xml" title="Follow Your 3D Heart Using Smartphone's Inertial Signals"/>
+  <paper order="18" file="ncs-heart-metrics.xml" title="Listen to the heart metrics using smartphones (YJ)"/>
+  <paper order="19" file="imwut2027-acc2pcg.xml" title="Acc2PCG (MJ): Reconstructing PCG Signals from a Smartphone's Inertial Signals"/>
+  <paper order="20" file="mobicom2027-imu3dface.xml" title="IMU3DFace: Using IMU sensor to eavesdrop on users' 3D face"/>
+  <paper order="21" file="mobicom2027-imutalker.xml" title="IMUTalker: IMU-driven Talking Face Generation in Extreme Noise"/>
+  <paper order="22" file="mobicom2027-imuavatar.xml" title="IMUAvatar: IMU-driven Universal Gaussian Head Avatars in Extreme Noise"/>
+  <paper order="23" file="mobicom2027-gait3dpose.xml" title="Gait3DPose (ZJ): Listen to Your Posture"/>
+  <paper order="24" file="mm2027-pose2gait.xml" title="Pose2Gait"/>
+  <paper order="25" file="cvpr2027-vif.xml" title="VIF (QR)"/>
+  <paper order="26" file="tmc2026-magnetact.xml" title="MagneTact: Utilizing Deformation-Induced Magnetic Field Variation for Tactile Sensing on Smartphones"/>
+  <paper order="27" file="imwut2027-liveness.xml" title="Voice Meets Vibration: Robust and Liveness-Aware Speaker Verification on Smartphones"/>
+  <paper order="28" file="imwut2027-emotion.xml" title="Beyond Voice: Speech–Accelerometer Fusion for Emotion Sensing in Smartphone Calls"/>
+  <paper order="29" file="survey-physics-ai.xml" title="From Human-centred Multimodal Sensing to Physics AI: Survey"/>
+</publications>

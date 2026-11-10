@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
+<paper id="tap2023-doa" tags="radar">
+  <title>Joint Detections of Frequency and Direction of Arrival in Wideband Based on Programmable Metasurface</title>
+  <authors></authors>
+  <topic>Radar &amp; Metasurface</topic>
+  <venue>IEEE Transactions on Antennas and Propagation (TAP) 2023</venue>
+  <note>Q1 Top, IF: 5.7</note>
+  <image>images/paper/tap2023-doa.png</image>
+  <imageAlt>Teaser figure placeholder for IEEE TAP 2023</imageAlt>
+</paper>

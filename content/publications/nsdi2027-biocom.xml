@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
+<paper id="nsdi2027-biocom" featured="true" tags="security">
+  <title>BioCom: Exploring Biometric-Bound Coding for Traceable Voice Communication</title>
+  <authors></authors>
+  <topic>Audio Security</topic>
+  <venue>NSDI 2027</venue>
+  <role>First Author</role>
+  <note>CCF-A</note>
+  <image>images/paper/nsdi2027-biocom.png</image>
+  <imageAlt>Teaser figure placeholder for NSDI 2027</imageAlt>
+</paper>

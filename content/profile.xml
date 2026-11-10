@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 个人简介、研究兴趣、联系方式。带 <![CDATA[ ... ]]> 的字段可直接写 HTML。 -->
+<profile>
+  <name>Guodong Liu (Eric Liu)</name>
+  <givenName>Guodong</givenName>
+  <familyName>Liu</familyName>
+  <alias>Eric Liu</alias>
+  <jobTitle>Ph.D. Student in Computer Science</jobTitle>
+  <shortDescription>Third-year Ph.D. student in computer science at the State Key Laboratory for Novel Software Technology, Nanjing University. Research spans mobile sensing, speech reconstruction, mmWave radar, embodied intelligence and AI for medicine.</shortDescription>
+  <tagline><![CDATA[AI &amp; CS &amp; EE &nbsp;&middot;&nbsp; Nanjing, China]]></tagline>
+  <bio><![CDATA[<p>
+                I am a third-year Ph.D. student in computer science at the
+                <strong>State Key Laboratory for Novel Software Technology</strong> of
+                <a href="https://www.nju.edu.cn/" target="_blank" rel="noopener">Nanjing University</a>.
+                I hope to do some meaningful things that build a learning and research path from
+                sensing, recognition, and cognition to embodied intelligence and AI agents.
+              </p>
+              <p><strong>My current research interests include</strong></p>]]></bio>
+  <copyBio>Guodong Liu (Eric Liu) is a third-year Ph.D. student in computer science at the State Key Laboratory for Novel Software Technology, Nanjing University. His research builds a path from sensing, recognition and cognition to embodied intelligence and AI agents, spanning mobile sensing, speech reconstruction, mmWave radar, trustworthy voice, AI for medicine and multimodal intelligence.</copyBio>
+  <photo src="images/portrait.png" alt="Portrait of Guodong Liu (Eric Liu)"/>
+
+  <interests>
+    <item><![CDATA[Embodied Intelligence (RL, XLA/VLA/WM, Robot), and Physical AI;]]></item>
+    <item><![CDATA[Edge/Sensing LM (Low-Bit LM, Model Compression), and Agents;]]></item>
+    <item><![CDATA[AI for Medicine;]]></item>
+    <item><![CDATA[Machine Learning, Representation Learning, Generative Model (Diffusion / Flow Matching / AR);]]></item>
+    <item><![CDATA[Multi-modal Intelligence (Vision, Speech/Ultrasound/Acoustics, mmWave, Accelerometer, WiFi, and so on), and HCI.]]></item>
+  </interests>
+
+  <university>Nanjing University</university>
+  <universityUrl>https://www.nju.edu.cn/</universityUrl>
+  <lab>State Key Laboratory for Novel Software Technology</lab>
+  <city>Nanjing</city>
+  <country>CN</country>
+  <countryName>China</countryName>
+  <location><![CDATA[&#128205; Nanjing, China]]></location>
+
+  <primaryEmail>Jellyliu97@foxmail.com</primaryEmail>
+  <secondaryEmail>EricLiu@smail.nju.edu.cn</secondaryEmail>
+  <links>
+    <link kind="cv" label="CV" title="Curriculum Vitae" href="https://jellyliu97.github.io/cv/"/>
+    <link kind="scholar" label="Google Scholar" title="Google Scholar" href="https://scholar.google.com/citations?hl=zh-CN&amp;user=ysxUnXsAAAAJ"/>
+    <link kind="github" label="GitHub" title="GitHub" href="https://github.com/Jellyliu97"/>
+  </links>
+
+  <expertise>
+    <topic>Embodied Intelligence</topic>
+    <topic>Physical AI</topic>
+    <topic>Edge and Sensing Language Models</topic>
+    <topic>Model Compression</topic>
+    <topic>AI Agents</topic>
+    <topic>AI for Medicine</topic>
+    <topic>Machine Learning</topic>
+    <topic>Representation Learning</topic>
+    <topic>Generative Models</topic>
+    <topic>Diffusion Models</topic>
+    <topic>Flow Matching</topic>
+    <topic>Multimodal Intelligence</topic>
+    <topic>Speech and Acoustic Sensing</topic>
+    <topic>mmWave Radar</topic>
+    <topic>Smartphone Accelerometer</topic>
+    <topic>Human-Computer Interaction</topic>
+  </expertise>
+</profile>
