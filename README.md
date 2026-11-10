@@ -213,6 +213,7 @@ JSON-LD（`ProfilePage` + `Person`，由 `site.xml` + `profile.xml` 自动生成
 | 改词云上方提示 | `content/projects.xml` 的 `<hint>`（居中斜体浅灰） |
 | 改网址 | `content/site.xml` 的 `<url>`（canonical / OG / JSON-LD / sitemap / robots 全部自动跟着变） |
 | 改「Last updated」 | `content/site.xml` 的 `lastUpdatedText`；`lastmod` 同时驱动 sitemap 与 JSON-LD 的 `dateModified` |
+| 整体字号 | `stylesheet.css` 顶部 `:root { --font-scale: 1.5 }`，改一个数即可（1 = 原始，1.5 = 放大 50%） |
 | 改版式 / 配色 | `stylesheet.css`、`index.template.html` |
 
 ---
