@@ -1,6 +1,6 @@
 /* 全局字号倍率：1 = 原始大小，1.5 = 整体放大 50%。
-   只影响字体，不影响 800px 容器宽度；想微调只改这一个数（如 1.4 / 1.6）。 */
-:root { --font-scale: 1.5; }
+   只影响字体，不影响容器宽度（当前 1000px）；想微调只改这一个数（如 1.4 / 1.6）。 */
+:root { --font-scale: 1.5; --page-width: 1000px; }
 
 /* latin-ext */
 @font-face {
@@ -496,7 +496,7 @@ span.highlight {
 /* Tag Cloud Styles */
 #tagcloud-container {
   width: 100%;
-  max-width: 800px;
+  max-width: var(--page-width);
   height: 300px;
   position: relative;
   margin: 0 auto;
@@ -1021,7 +1021,7 @@ span.highlight {
   background: rgba(255, 255, 255, 0.92);
 }
 .site-nav-inner {
-  max-width: 800px;
+  max-width: var(--page-width);
   margin: 0 auto;
   padding: 10px 16px;
   display: flex;
@@ -1127,11 +1127,13 @@ h2.section-heading {
 .pub-role { font-weight: 700; color: #8a5c00; }
 .pub-note { color: #666; }
 .pub-links { margin-top: 5px; font-size: calc(13px * var(--font-scale)); }
+.pub-figure { text-align: center; }
 .pub-thumb {
   display: block;
   width: 100%;
   max-width: 190px;
   height: auto;
+  margin: 0 auto;
   border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
