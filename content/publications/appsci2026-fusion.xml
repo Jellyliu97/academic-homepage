@@ -2,7 +2,7 @@
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
 <paper id="appsci2026-fusion" tags="radar">
   <title>Acoustic Source Fusion-Based Passive Eavesdropping System Using Millimeter-Wave Radar</title>
-  <authors></authors>
+  <authors><![CDATA[Minjun Jiang, Zhijun Li<sup>*</sup>, <strong>Guodong Liu</strong>]]></authors>
   <topic>Radar &amp; Metasurface</topic>
   <venue>Applied Sciences 2026</venue>
   <image>images/paper/appsci2026-fusion.png</image>

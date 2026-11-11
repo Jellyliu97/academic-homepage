@@ -2,7 +2,7 @@
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
 <paper id="aces2022-gesture" tags="radar">
   <title>Intelligent Metasurface with Machine Learning for Non-contact Hand Gesture Recognition</title>
-  <authors></authors>
+  <authors><![CDATA[<strong>Guodong Liu</strong>, Haipeng Wang, He Li, Yunbo Li<sup>*</sup>]]></authors>
   <topic>Radar &amp; Metasurface</topic>
   <venue>ACES 2022</venue>
   <role>First Author</role>

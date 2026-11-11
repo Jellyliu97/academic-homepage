@@ -2,7 +2,7 @@
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
 <paper id="chi2027-beyondmic" featured="true" tags="speech">
   <title>Beyond the Microphone: Noise-Resilient Speech Interaction Through Smartphone Accelerometers</title>
-  <authors></authors>
+  <authors><![CDATA[<strong>Guodong Liu</strong>, Lei Wang<sup>*</sup>, Qianran Qiao,  Haipeng Dai<sup>*</sup>, He huang, Guihai Chen]]></authors>
   <topic>Speech Recovery</topic>
   <venue>CHI 2027</venue>
   <role>First Author</role>

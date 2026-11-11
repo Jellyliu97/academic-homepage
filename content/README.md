@@ -36,14 +36,25 @@
 | `titleUrl` | — | URL | 有值时标题变成超链接 |
 | `links/link` | — | `label` + `href` | 底部 Paper / PDF / Code 等按钮，可多条 |
 
-`authors` 示例（CDATA 里可以写 HTML，用来加粗自己的名字）：
+`authors` 示例（CDATA 里可以写 HTML）：
 
 ```xml
+<!-- 最简单：只加粗自己 -->
 <authors><![CDATA[<strong>Guodong Liu</strong>, Jane Doe, John Smith]]></authors>
+
+<!-- 完整：共同一作 †、共同通讯 *、末尾脚注 -->
+<authors><![CDATA[<strong>Guodong Liu</strong><sup>†</sup>, Jane Doe<sup>†</sup>, John Smith<sup>*</sup><span class="author-note">† Equal contribution. * Corresponding author.</span>]]></authors>
 ```
 
-纯文本写法也可以，但作者名里若含 `&` 要写成 `&amp;`；**留空写成 `<authors></authors>` 即可**。
-样式在 `stylesheet.css` 的 `.pub-authors`；渲染逻辑在 `build.py` 的 `make_paper_row()`。
+- **加粗自己**：`<strong>Guodong Liu</strong>`，显示为主题深蓝 + 加粗（`.pub-authors strong`）；
+  想只加粗不变色，把该规则的 `color` 改成 `inherit`。
+- **共同一作 / 共同通讯**：名字后接上标 `<sup>†</sup>` / `<sup>*</sup>`，作者行末用
+  `<span class="author-note">` 写脚注。符号可自选（`†`、`‡`、`#`），只要与脚注一一对应。
+- **样式**：`.pub-authors sup`（上标不撑行高）和 `.pub-authors .author-note`（小一号灰字、独占一行）
+  在 `stylesheet.css`；渲染逻辑在 `build.py` 的 `make_paper_row()`。
+- ⚠️ `<sup>`、`<span>` 必须写在 CDATA 里；裸写在 `<authors>` 里会被 XML 当成子元素，后面的文字会丢。
+- `role` 是纯文本字段（会被转义），不能写上标；共同贡献信息统一放 `authors`。
+- 纯文本写法也可以，但作者名里若含 `&` 要写成 `&amp;`；**留空写成 `<authors></authors>` 即可**。
 
 ---
 

@@ -1123,6 +1123,8 @@ h2.section-heading {
   color: #444;
 }
 .pub-authors strong { color: #294f5c; }
+.pub-authors sup { font-size: 0.72em; vertical-align: super; line-height: 0; }
+.pub-authors .author-note { display: block; margin-top: 2px; font-size: 0.82em; color: #777; }
 .pub-meta { font-size: calc(12px * var(--font-scale)); color: #555; }
 .pub-role { font-weight: 700; color: #8a5c00; }
 .pub-note { color: #666; }

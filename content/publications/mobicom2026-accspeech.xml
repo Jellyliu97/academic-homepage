@@ -2,11 +2,11 @@
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
 <paper id="mobicom2026-accspeech" featured="true" tags="speech">
   <title>General Speech Reconstruction for Voice Calls Using Smartphone's Built-in Accelerometer</title>
-  <authors></authors>
+  <authors><![CDATA[<strong>Guodong Liu</strong>, Lei Wang<sup>*</sup>, Xingwei Wang, Qianran Qiao, Cheng Peng, Jie Xiong, Haipeng Dai<sup>*</sup>, Guihai Chen]]></authors>
   <topic>Speech Recovery</topic>
   <venue>MobiCom 2026</venue>
   <role>First Author</role>
-  <note>CCF-A, Acceptance Rate: 14% (88/628)</note>
+  <note>CCF-A, Acceptance Rate: 14%</note>
   <image>images/paper/mobicom2026-accspeech.png</image>
   <imageAlt>Teaser figure placeholder for MobiCom 2026</imageAlt>
 </paper>

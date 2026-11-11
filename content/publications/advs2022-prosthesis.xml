@@ -2,7 +2,7 @@
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
 <paper id="advs2022-prosthesis" tags="radar">
   <title>Non-contact electromagnetic wireless recognition for prosthesis based on intelligent metasurface</title>
-  <authors></authors>
+  <authors><![CDATA[Haipeng Wang<sup>†</sup>, Yuxuan Zhou<sup>†</sup>, He Li<sup>†</sup>, <strong>Guodong Liu</strong>, Simeng Yin, Pengju Li, Shuyue Dong, Chaoyue Gong, Shiyu Wang, Yunbo Li<sup>*</sup>, Tiejun Cui<sup>*</sup>]]></authors>
   <topic>Radar &amp; Metasurface</topic>
   <venue>Advanced Science 2022</venue>
   <role>Second Author</role>

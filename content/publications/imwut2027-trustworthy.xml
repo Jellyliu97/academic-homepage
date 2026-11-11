@@ -2,7 +2,7 @@
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
 <paper id="imwut2027-trustworthy" tags="security">
   <title>Towards Trustworthy Mobile Speech Interaction: Ensuring Voice Authenticity and Transmission Integrity</title>
-  <authors></authors>
+  <authors><![CDATA[<strong>Guodong Liu</strong>, Lei Wang<sup>*</sup>, Dongxu Liu, Qianran Qiao, Haipeng Dai<sup>*</sup>, He Huang, Guihai Chen]]></authors>
   <topic>Audio Security</topic>
   <venue>IMWUT 2027</venue>
   <role>First Author</role>

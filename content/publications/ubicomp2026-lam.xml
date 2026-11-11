@@ -2,7 +2,7 @@
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
 <paper id="ubicomp2026-lam" featured="true" tags="radar">
   <title>LAM-assisted Acoustic Eavesdropping in Multi-speaker Scenarios via Commercial mmWave Radar</title>
-  <authors></authors>
+  <authors><![CDATA[<strong>Guodong Liu</strong>, Lei Wang<sup>*</sup>, Minjun Jiang, Qianran Qiao, Keran Li, Haipeng Dai<sup>*</sup>, Guihai Chen]]></authors>
   <topic>Radar &amp; Metasurface</topic>
   <venue>Ubicomp/IMWUT 2026</venue>
   <role>First Author</role>

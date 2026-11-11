@@ -8,10 +8,12 @@
        · 以 _ 开头的文件会被 build.py 跳过，所以本模板不会被当成论文
        · role / note / authors / titleUrl / links 可以留空或整行删掉
        · <authors> 显示在标题下方；用 CDATA 包起来可以写 HTML
+         - 加粗自己：<strong>你的名字</strong>
+         - 共同一作：名字后加 <sup>†</sup>；共同通讯：<sup>*</sup>；末尾用 author-note 写脚注
        · 配图放 images/paper/<slug>.png，与本文件同名 -->
 <paper id="NEW-SLUG" tags="speech,sensing">
   <title>Paper title goes here</title>
-  <authors><![CDATA[<strong>Guodong Liu</strong>, Jane Doe, John Smith]]></authors>
+  <authors><![CDATA[<strong>Guodong Liu</strong><sup>†</sup>, Jane Doe<sup>†</sup>, John Smith<sup>*</sup><span class="author-note">† Equal contribution. * Corresponding author.</span>]]></authors>
   <topic>Speech Recovery</topic>
   <venue>Venue / Year</venue>
   <role>First Author</role>
@@ -23,3 +25,12 @@
     <link label="Paper" href="https://doi.org/10.xxxx/xxxxx"/>
   </links>
 </paper>
+
+
+
+
+
+<!-- 
+<authors><![CDATA[<strong>Guodong Liu</strong><sup>†</sup>, Jane Doe<sup>†</sup>, John Smith<sup>*</sup><span class="author-note">† Equal contribution. * Corresponding author.</span>]]></authors> 
+-->
+
