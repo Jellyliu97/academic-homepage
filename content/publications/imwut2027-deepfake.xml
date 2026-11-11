@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
-<paper id="imwut2027-deepfake" tags="security">
+<paper id="imwut2027-deepfake" featured="true" tags="security">
   <title>Ultrasound-Assisted Biometric Watermarking Against Face Video Deepfakes</title>
   <authors><![CDATA[<strong>Guodong Liu</strong>, Lei Wang<sup>*</sup>, Dongxu Liu, Qianran Qiao, Meng Li, Haipeng Dai<sup>*</sup>, He Huang, Guihai Chen]]></authors>
   <topic>Audio Security</topic>
@@ -9,4 +9,5 @@
   <note>CCF-A</note>
   <image>images/paper/imwut2027-deepfake.png</image>
   <imageAlt>Teaser figure placeholder for IMWUT 2027</imageAlt>
+  <titleUrl>https://arxiv.org/abs/2611.11800</titleUrl>
 </paper>

@@ -214,6 +214,7 @@ JSON-LD（`ProfilePage` + `Person`，由 `site.xml` + `profile.xml` 自动生成
 | 改网址 | `content/site.xml` 的 `<url>`（canonical / OG / JSON-LD / sitemap / robots 全部自动跟着变） |
 | 改「Last updated」 | `content/site.xml` 的 `lastUpdatedText`；`lastmod` 同时驱动 sitemap 与 JSON-LD 的 `dateModified` |
 | 整体字号 | `stylesheet.css` 顶部 `:root { --font-scale: 1.5 }`，改一个数即可（1 = 原始，1.5 = 放大 50%） |
+| 论文配图 | `stylesheet.css` 的 `--paper-img-width`（默认 190px，统一宽度）与 `--paper-img-ratio`（默认 `3 / 2`）；不同尺寸自动白底居中、整列等高 |
 | 改版式 / 配色 | `stylesheet.css`、`index.template.html` |
 
 ---

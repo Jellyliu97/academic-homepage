@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
-<paper id="admt2023-metasureface" featured="true" tags="radar">
+<paper id="admt2023-metasureface" tags="radar">
   <title>Indoor Positioning and Posture Recognition of Human Body Applying Integrating-Type Intelligent Metasurfaces Based Sensing System</title>
   <authors><![CDATA[<strong>Guodong Liu</strong>, Wangsheng Hu, Wenying Hou, Shengjie Huang, Duming Cao, Haipeng Wang, Yuxuan Zhou, Fei He, Yunbo Li<sup>*</sup>]]></authors>
   <topic>Radar &amp; Metasurface</topic>
@@ -10,7 +10,7 @@
   <image>images/paper/admt2023-metasureface.png</image>
   <imageAlt>Teaser figure placeholder for Adv. Mater. Technol. 2023</imageAlt>
   <titleUrl>https://doi.org/10.1002/admt.202301006</titleUrl>
-  <links>
+  <!-- <links>
     <link label="Paper" href="https://doi.org/10.1002/admt.202301006"/>
-  </links>
+  </links> -->
 </paper>

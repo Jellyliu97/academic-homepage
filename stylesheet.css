@@ -1,6 +1,11 @@
 /* 全局字号倍率：1 = 原始大小，1.5 = 整体放大 50%。
    只影响字体，不影响容器宽度（当前 1000px）；想微调只改这一个数（如 1.4 / 1.6）。 */
-:root { --font-scale: 1.5; --page-width: 1000px; }
+:root {
+  --font-scale: 1.5;          /* 字号倍率 */
+  --page-width: 1000px;       /* 主容器宽度 */
+  --paper-img-width: 190px;   /* 论文配图统一宽度，保证整列图片框等高 */
+  --paper-img-ratio: 3 / 2;   /* 论文配图统一比例；空白处用白色填充，可改 4 / 3 或 16 / 9 */
+}
 
 /* latin-ext */
 @font-face {
@@ -1132,8 +1137,11 @@ h2.section-heading {
 .pub-figure { text-align: center; }
 .pub-thumb {
   display: block;
-  width: 100%;
-  max-width: 190px;
+  width: var(--paper-img-width);
+  max-width: 100%;
+  aspect-ratio: var(--paper-img-ratio);
+  object-fit: contain;
+  background: #fff;
   height: auto;
   margin: 0 auto;
   border-radius: 6px;

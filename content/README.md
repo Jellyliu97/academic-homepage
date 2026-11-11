@@ -31,7 +31,7 @@
 | `venue` | ✅ | 纯文本 | 期刊 / 会议 + 年份（斜体加粗） |
 | `role` | — | 纯文本 | 作者位次，如 `First Author`（橙色加粗） |
 | `note` | — | 纯文本 | 备注，如 `CCF-A, Acceptance Rate: 14% (88/628)` |
-| `image` | ✅ | 路径 | 论文配图，通常 `images/paper/<slug>.png` |
+| `image` | ✅ | 路径 | 论文配图，通常 `images/paper/<slug>.png`；**尺寸无需统一**，页面会按 3:2 比例白底居中显示 |
 | `imageAlt` | ✅ | 纯文本 | 图片替代文字 |
 | `titleUrl` | — | URL | 有值时标题变成超链接 |
 | `links/link` | — | `label` + `href` | 底部 Paper / PDF / Code 等按钮，可多条 |
