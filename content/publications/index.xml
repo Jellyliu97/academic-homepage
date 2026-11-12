@@ -31,7 +31,7 @@
   <paper order="23" file="mobicom2027-gait3dpose.xml" title="Gait3DPose (ZJ): Listen to Your Posture"/>
   <paper order="24" file="mm2027-pose2gait.xml" title="Pose2Gait"/>
   <paper order="25" file="cvpr2027-vif.xml" title="VIF (QR)"/>
-  <paper order="26" file="tmc2026-magnetact.xml" title="MagneTact: Utilizing Deformation-Induced Magnetic Field Variation for Tactile Sensing on Smartphones"/>
+  <paper order="26" file="tmc2026-magnetact.xml" title="MagneTact: Enhancing IMU-Based Tactile Sensing with Deformation-Induced Magnetic Signals"/>
   <paper order="27" file="imwut2027-liveness.xml" title="Voice Meets Vibration: Robust and Liveness-Aware Speaker Verification on Smartphones"/>
   <paper order="28" file="imwut2027-emotion.xml" title="Beyond Voice: Speech–Accelerometer Fusion for Emotion Sensing in Smartphone Calls"/>
   <paper order="29" file="survey-physics-ai.xml" title="From Human-centred Multimodal Sensing to Physics AI: Survey"/>

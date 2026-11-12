@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
 <paper id="tmc2026-magnetact" tags="sensing">
-  <title>MagneTact: Utilizing Deformation-Induced Magnetic Field Variation for Tactile Sensing on Smartphones</title>
-  <authors></authors>
+  <title>MagneTact: Enhancing IMU-Based Tactile Sensing with Deformation-Induced Magnetic Signals</title>
+  <authors><![CDATA[Dongxu Liu, Wen Cheng, Yachen Zhong, Haohan Wang, Mingzhi Pang, <strong>Guodong Liu</strong>, Lei Wang, Haipeng Dai, Wei Wang<sup>*</sup>]]></authors>
   <topic>Multimodal Sensing</topic>
   <venue>IEEE Transactions on Mobile Computing (TMC) 2026</venue>
   <note>CCF-A</note>

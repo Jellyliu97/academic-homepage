@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
 <paper id="tmc2027-earseal" tags="security">
-  <title>EarSeal: End-to-End Speech Integrity via In-Ear Vocal-Biometric Consistency and Watermarking</title>
-  <authors></authors>
+  <title>EarSeal: End-to-End Speech Integrity via Earbud IMU-Audio Consistency and Speech Watermarking</title>
+  <authors><![CDATA[Wenhao Zhang<sup>†</sup>, <strong>Guodong Liu<sup>†</sup></strong>, Wen Hu, Chun Tung Chou, Mahbub Hassan,  Lei Wang, Haipeng Dai<sup>*</sup>, Wei Wang, and Guihai Chen<sup>*</sup>]]></authors>
   <topic>Audio Security</topic>
   <venue>IEEE Transactions on Mobile Computing (TMC) 2027</venue>
   <role>Co-first Author</role>
