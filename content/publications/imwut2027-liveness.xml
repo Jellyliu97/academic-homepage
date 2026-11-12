@@ -2,7 +2,7 @@
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
 <paper id="imwut2027-liveness" tags="sensing">
   <title>Voice Meets Vibration: Robust and Liveness-Aware Speaker Verification on Smartphones</title>
-  <authors></authors>
+  <authors><![CDATA[Lei Wang, <strong>Guodong Liu</strong>, Xi Zhang, Dai Gao, Haipeng Dai, Yu-E Sun, He Huang<sup>*</sup>]]></authors>
   <topic>Multimodal Sensing</topic>
   <venue>IMWUT 2027</venue>
   <role>First Student Author</role>

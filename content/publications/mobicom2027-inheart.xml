@@ -2,7 +2,7 @@
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
 <paper id="mobicom2027-inheart" featured="true" tags="recon3d,medical">
   <title>InHeart: Exploring 3D Cardiac Anatomy Reconstruction from Smartphone Inertial Sensing</title>
-  <authors></authors>
+  <authors><![CDATA[Lei Wang, <strong>Guodong Liu</strong>, Yuanjing Luo, Haipeng Dai, Wei Wang, Weichun Qian, He Huang<sup>*</sup>]]></authors>
   <topic>3D Reconstruction · AI for Medicine</topic>
   <venue>MobiCom 2027</venue>
   <role>First Student Author</role>

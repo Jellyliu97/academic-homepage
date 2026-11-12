@@ -2,7 +2,7 @@
 <!-- 一篇论文 = 一个文件；顺序由 content/publications/index.xml 决定，本文件不写 order。 -->
 <paper id="imwut2027-emotion" tags="sensing">
   <title>Beyond Voice: Speech–Accelerometer Fusion for Emotion Sensing in Smartphone Calls</title>
-  <authors></authors>
+  <authors><![CDATA[Jiasheng Zhang, <strong>Guodong Liu</strong>, Lei Wang, Haipeng Dai, He Huang<sup>*</sup>]]></authors>
   <topic>Multimodal Sensing</topic>
   <venue>IMWUT 2027</venue>
   <role>Second Author</role>
