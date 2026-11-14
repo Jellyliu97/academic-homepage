@@ -1175,3 +1175,21 @@ h2.section-heading {
   font-family: inherit;
   font-size: calc(14px * var(--font-scale));
 }
+.pub-sort { display: flex; justify-content: flex-end; margin: 0 0 10px; }
+.sort-btn {
+  font-family: inherit;
+  font-size: calc(13px * var(--font-scale));
+  padding: 3px 12px;
+  border: 1px solid #e2cfa6;
+  border-radius: 12px;
+  background: #fffdf5;
+  color: #6e3519;
+  cursor: pointer;
+}
+.sort-btn:hover { background: #fdf3d9; }
+.sort-btn:active { transform: translateY(1px); }
+
+#visitor-map { max-width: 340px; margin: 10px auto 26px; text-align: center; }
+#visitor-map iframe, #visitor-map img, #visitor-map canvas,
+#visitor-map div { max-width: 100%; }
+.visitor-note { font-size: calc(11px * var(--font-scale)); color: #999; margin-top: 4px; }

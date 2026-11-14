@@ -184,6 +184,25 @@ CV 页在 `cv/index.html`：把 `cv.pdf` 放进同目录，再把 `content/profi
 
 ---
 
+## 📚 论文年份排序
+
+分类按钮下方右侧有一个 `Year ↓ / Year ↑` 按钮：在 **All** 或任意分类下都能点，只重排当前列表，不会破坏筛选状态。
+
+年份优先取论文 XML 的 `<year>`，没写就自动从 `venue` 里提取 4 位年份。目前 `ncs-heart-metrics`、`survey-physics-ai` 识别不到年份，排序时会始终排在最后 —— 在它们的 XML 里加一行 `<year>2027</year>` 即可。
+
+## 🗺️ 访客地图（默认关闭）
+
+GitHub Pages 是静态托管，自己统计不了 IP，必须用第三方服务。推荐 **MapMyVisitors**（免费、地图 + 访问计数，学术主页常用）：
+
+1. 打开 <https://mapmyvisitors.com> 注册，创建一个地图（可设置样式）
+2. 复制它生成的整段 HTML（一般是 `<script src="https://mapmyvisitors.com/map.js?d=...">`）
+3. 粘到 `content/site.xml` 的 `<visitorMap><embed><![CDATA[ ... ]]></embed>` 里
+4. 把 `enabled="false"` 改成 `enabled="true"`
+5. `./deploy.sh`
+
+> ClustrMaps、RevolverMaps、Flag Counter 也可以，代码粘同一个位置即可。
+> ⚠️ 这类服务会记录访客 IP 与地区并在页面上公开展示；如果只想看流量、不想公开地图，可以改用 Plausible / Umami（但没有地图）。
+
 ## 🔍 SEO / 让搜索引擎收录
 
 已配置：title / description / keywords / robots / canonical、Open Graph、Twitter Card、
@@ -211,6 +230,7 @@ JSON-LD（`ProfilePage` + `Person`，由 `site.xml` + `profile.xml` 自动生成
 | 改词云条目 | `content/projects.xml` 的 `<cloud>` |
 | 加 / 改研究项目 | `content/projects.xml` 的 `<items>` 加一条 `<item>` |
 | 改词云上方提示 | `content/projects.xml` 的 `<hint>`（居中斜体浅灰） |
+| 开启访客地图 | `content/site.xml` 的 `<visitorMap>`：粘第三方代码，`enabled` 改 `true` |
 | 改网址 | `content/site.xml` 的 `<url>`（canonical / OG / JSON-LD / sitemap / robots 全部自动跟着变） |
 | 改「Last updated」 | `content/site.xml` 的 `lastUpdatedText`；`lastmod` 同时驱动 sitemap 与 JSON-LD 的 `dateModified` |
 | 整体字号 | `stylesheet.css` 顶部 `:root { --font-scale: 1.5 }`，改一个数即可（1 = 原始，1.5 = 放大 50%） |

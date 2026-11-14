@@ -77,6 +77,10 @@
           <div class="tag-filter" id="tagFilter">
 {{BLOCK:filters}}
           </div>
+          <div class="pub-sort">
+            <button id="yearSortBtn" type="button" class="sort-btn" data-dir="desc"
+                    title="Sort publications by year">Year ↓</button>
+          </div>
           <table class="publications-table" style="width:100%;border:0px;border-spacing:0 16px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 {{BLOCK:papers}}
           </tbody></table>
@@ -92,6 +96,25 @@
               const count = tag === 'all' ? total : Array.from(rows).filter(r => r.dataset.tags.split(',').includes(tag)).length;
               btn.insertAdjacentHTML('beforeend', ' <span class="tag-count">(' + count + ')</span>');
             });
+          });
+
+          // Year sorting: only reorders rows, keeps the current tag filter untouched.
+          let yearDir = 'desc';
+          document.getElementById('yearSortBtn').addEventListener('click', function() {
+            yearDir = yearDir === 'desc' ? 'asc' : 'desc';
+            this.dataset.dir = yearDir;
+            this.textContent = yearDir === 'desc' ? 'Year ↓' : 'Year ↑';
+            const tbody = document.querySelector('.publications-table tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr[data-tags]'));
+            rows.sort(function(a, b) {
+              const ya = parseInt(a.dataset.year || '0', 10);
+              const yb = parseInt(b.dataset.year || '0', 10);
+              if (!ya && !yb) return 0;
+              if (!ya) return 1;
+              if (!yb) return -1;
+              return yearDir === 'desc' ? yb - ya : ya - yb;
+            });
+            rows.forEach(function(r) { tbody.appendChild(r); });
           });
 
           document.getElementById('tagFilter').addEventListener('click', function(e) {
@@ -256,6 +279,8 @@
 {{BLOCK:contact}}
           </ul>
         </section>
+
+        {{BLOCK:visitorMap}}
       </td>
     </tr>
   </tbody></table>

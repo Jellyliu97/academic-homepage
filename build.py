@@ -70,6 +70,15 @@ def inner(node: ET.Element) -> str:
     return (node.text or "").strip()
 
 
+def paper_year(p: ET.Element) -> str:
+    """年份优先取 <year>，否则从 venue 提取 4 位年份；都没有返回空串。"""
+    year = field(p, "year")
+    if year:
+        return year
+    m = re.search(r"(19|20)\d{2}", field(p, "venue"))
+    return m.group(0) if m else ""
+
+
 def esc(value: object) -> str:
     """HTML 转义（不转义单引号，保持与原页面一致）。"""
     return (str(value).replace("&", "&amp;").replace("<", "&lt;")
@@ -159,6 +168,9 @@ def validate(site: ET.Element, papers: list[ET.Element], projects: ET.Element) -
         image = field(p, "image")
         if image and not (ROOT / image).is_file():
             warnings.append(f"{p.get('id')}: 找不到配图 {image}（可先放占位图）")
+        if not paper_year(p):
+            warnings.append(f"{p.get('id')}: 没识别到年份，年份排序时会排在最后"
+                            f"（可在 XML 里加 <year>2026</year>）")
     for item in projects.findall("cloud/item"):
         tag = item.get("tag")
         if tag not in valid_tags:
@@ -287,6 +299,7 @@ def make_paper_row(p: ET.Element) -> str:
     cls = ' class="pub-featured"' if featured else ""
     style = ' style="background-color: lightyellow;"' if featured else ""
 
+    year = paper_year(p)
     title_url = field(p, "titleUrl")
     title_html = (
         f'<a href="{esc(title_url)}" target="_blank" rel="noopener">'
@@ -318,7 +331,7 @@ def make_paper_row(p: ET.Element) -> str:
 
     return "\n".join([
         f'          <tr id="pub-{esc(p.get("id"))}"{cls} '
-        f'data-tags="{esc(p.get("tags"))}"{style}>',
+        f'data-tags="{esc(p.get("tags"))}" data-year="{esc(year)}"{style}>',
         f'            <td class="pub-figure" style="padding:{pad};width:27%;vertical-align:middle">',
         f'              <img class="pub-thumb" src="{esc(field(p, "image"))}" width="{width}"',
         f'                   alt="{esc(field(p, "imageAlt"))}" loading="lazy">',
@@ -353,6 +366,20 @@ def make_projects_body(projects: ET.Element) -> str:
     if hint:
         chunks.append(f'<p class="cloud-hint">{hint}</p>')
     return "\n          ".join(chunks)
+
+
+def make_visitor_map(site: ET.Element) -> str:
+    """可选：第三方访客地图（MapMyVisitors / ClustrMaps 等），site.xml 启用后渲染。"""
+    node = site.find("visitorMap")
+    if node is None or node.get("enabled") != "true":
+        return ""
+    embed = field(node, "embed")
+    if not embed:
+        return ""
+    provider = node.get("provider") or ""
+    note = f'<p class="visitor-note">Visitor map by {esc(provider)}</p>' if provider else ""
+    return ('        <section id="visitor-map" class="page-section">\n'
+            + embed + "\n" + note + "\n        </section>")
 
 
 def make_contact(profile: ET.Element) -> str:
@@ -476,6 +503,7 @@ def build(*, check_only: bool = False, list_only: bool = False) -> None:
         "service": "\n".join(f"              <li>{inner(i)}</li>" for i in service.findall("item")),
         "awards": "\n".join(f"              <li>{inner(i)}</li>" for i in awards.findall("item")),
         "contact": make_contact(profile),
+        "visitorMap": make_visitor_map(site),
     }
 
     html_text = TEMPLATE.read_text(encoding="utf-8")

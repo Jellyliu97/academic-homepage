@@ -13,6 +13,7 @@
        · 配图放 images/paper/<slug>.png，与本文件同名 -->
 <paper id="NEW-SLUG" tags="speech,sensing">
   <title>Paper title goes here</title>
+  <year>2026</year>  <!-- 可省略；省略时自动从 venue 提取，用于年份排序 -->
   <authors><![CDATA[<strong>Guodong Liu</strong><sup>†</sup>, Jane Doe<sup>†</sup>, John Smith<sup>*</sup><span class="author-note">† Equal contribution. * Corresponding author.</span>]]></authors>
   <topic>Speech Recovery</topic>
   <venue>Venue / Year</venue>
