@@ -17,22 +17,22 @@
   <paper order="9" file="tmc2027-vibmic.xml" title="A Noise-Resilient Vibration-Driven Speech Microphone"/>
   <paper order="10" file="mobicom2027-e2e.xml" title="End-to-End Causal On-Device Speech System for Real-Time Communication in Extreme Noise"/>
   <paper order="11" file="biocom.xml" title="BioCom: Exploring Biometric-Bound Coding for Traceable Voice Communication"/>
-  <paper order="12" file="tmc2027-watermark.xml" title="Real-time Watermarking Your Speech (BioCom add Stabilizer)"/>
+  <paper order="12" hidden="true" file="tmc2027-watermark.xml" title="Real-time Watermarking Your Speech (BioCom add Stabilizer)"/>
   <paper order="13" file="imwut2027-deepfake.xml" title="Ultrasound-Assisted Biometric Watermarking Against Face Video Deepfakes"/>
   <paper order="14" file="imwut2027-trustworthy.xml" title="Towards Trustworthy Mobile Speech Interaction: Ensuring Voice Authenticity and Transmission Integrity"/>
   <paper order="15" file="tmc2027-earseal.xml" title="EarSeal: End-to-End Speech Integrity via In-Ear Vocal-Biometric Consistency and Watermarking"/>
   <paper order="16" file="mobicom2027-inheart.xml" title="InHeart: Exploring 3D Cardiac Anatomy Reconstruction from Smartphone Inertial Sensing"/>
-  <paper order="17" file="nmi2027-heart.xml" title="Follow Your 3D Heart Using Smartphone's Inertial Signals"/>
-  <paper order="18" file="ncs-heart-metrics.xml" title="Listen to the heart metrics using smartphones (YJ)"/>
+  <paper order="17" hidden="true" file="nmi2027-heart.xml" title="Follow Your 3D Heart Using Smartphone's Inertial Signals"/>
+  <paper order="18" hidden="true" file="ncs-heart-metrics.xml" title="Listen to the heart metrics using smartphones (YJ)"/>
   <paper order="19" file="imwut2027-acc2pcg.xml" title="Acc2PCG (MJ): Reconstructing PCG Signals from a Smartphone's Inertial Signals"/>
-  <paper order="20" file="mobicom2027-imu3dface.xml" title="IMU3DFace: Using IMU sensor to eavesdrop on users' 3D face"/>
-  <paper order="21" file="mobicom2027-imutalker.xml" title="IMUTalker: IMU-driven Talking Face Generation in Extreme Noise"/>
-  <paper order="22" file="mobicom2027-imuavatar.xml" title="IMUAvatar: IMU-driven Universal Gaussian Head Avatars in Extreme Noise"/>
-  <paper order="23" file="mobicom2027-gait3dpose.xml" title="Gait3DPose (ZJ): Listen to Your Posture"/>
-  <paper order="24" file="mm2027-pose2gait.xml" title="Pose2Gait"/>
-  <paper order="25" file="cvpr2027-vif.xml" title="VIF (QR)"/>
+  <paper order="20" hidden="true" file="mobicom2027-imu3dface.xml" title="IMU3DFace: Using IMU sensor to eavesdrop on users' 3D face"/>
+  <paper order="21" hidden="true" file="mobicom2027-imutalker.xml" title="IMUTalker: IMU-driven Talking Face Generation in Extreme Noise"/>
+  <paper order="22" hidden="true" file="mobicom2027-imuavatar.xml" title="IMUAvatar: IMU-driven Universal Gaussian Head Avatars in Extreme Noise"/>
+  <paper order="23" hidden="true" file="mobicom2027-gait3dpose.xml" title="Gait3DPose (ZJ): Listen to Your Posture"/>
+  <paper order="24" hidden="true" file="mm2027-pose2gait.xml" title="Pose2Gait"/>
+  <paper order="25" hidden="true" file="cvpr2027-vif.xml" title="VIF (QR)"/>
   <paper order="26" file="tmc2026-magnetact.xml" title="MagneTact: Enhancing IMU-Based Tactile Sensing with Deformation-Induced Magnetic Signals"/>
   <paper order="27" file="imwut2027-liveness.xml" title="Voice Meets Vibration: Robust and Liveness-Aware Speaker Verification on Smartphones"/>
   <paper order="28" file="imwut2027-emotion.xml" title="Beyond Voice: Speech–Accelerometer Fusion for Emotion Sensing in Smartphone Calls"/>
-  <paper order="29" file="survey-physics-ai.xml" title="From Human-centred Multimodal Sensing to Physics AI: Survey"/>
+  <paper order="29" hidden="true" file="survey-physics-ai.xml" title="From Human-centred Multimodal Sensing to Physics AI: Survey"/>
 </publications>

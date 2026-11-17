@@ -77,6 +77,7 @@
 | `file` | ✅ | 论文 XML 文件名，必须与磁盘上的文件一致 |
 | `title` | — | 标题摘要，只用于清单查看，不影响页面 |
 | `order` | — | 显示编号；省略则自动取行号，写 `order="30"` 便于统计 |
+| `hidden` | — | `"true"` 时该论文不渲染（XML 内容完整保留，删掉属性即恢复），适合 coming soon |
 
 新增流程：复制 `_template.xml` → 改名 → 填字段 → **在 `index.xml` 末尾加一行**
 `<paper file="new-slug.xml" title="Paper title"/>` → `./deploy.sh`。

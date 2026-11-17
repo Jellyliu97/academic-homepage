@@ -221,7 +221,8 @@ JSON-LD（`ProfilePage` + `Person`，由 `site.xml` + `profile.xml` 自动生成
 | 动作 | 只需要 |
 | --- | --- |
 | 加 / 改论文 | 复制 `_template.xml` → 改名 → 填字段 → 配图 → **在 `index.xml` 末尾登记** |
-| 查论文总数 / 编号 | `python build.py --list` |
+| 查论文总数 / 编号 | `python build.py --list`（隐藏的会标 `[hidden]`） |
+| 临时隐藏论文 | `content/publications/index.xml` 对应行加 `hidden="true"`（页面不显示，内容保留） |
 | 调整论文顺序 | 在 `content/publications/index.xml` 里挪动对应行（不用改数字） |
 | 补作者名单 | 对应论文 XML 的 `<authors>`（留空不显示，支持 CDATA 富文本） |
 | 加 News / 奖项 / Service | 对应 XML 里加一条 `<item>` |

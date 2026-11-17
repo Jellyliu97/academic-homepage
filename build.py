@@ -117,7 +117,8 @@ def load_index() -> list[dict]:
             raise BuildError(f"index.xml 第 {line_no} 行：order 重复 {order}")
         seen_files.add(filename)
         seen_orders.add(order)
-        entries.append({"order": order, "file": filename, "title": title})
+        entries.append({"order": order, "file": filename, "title": title,
+                        "hidden": e.get("hidden") == "true"})
 
     if not entries:
         raise BuildError("index.xml 里没有登记任何论文")
@@ -413,15 +414,19 @@ def build(*, check_only: bool = False, list_only: bool = False) -> None:
     experience = load("experience.xml")
     projects = load("projects.xml")
     entries = load_index()
-    papers = load_papers(entries)
+    visible = [e for e in entries if not e["hidden"]]
+    papers = load_papers(visible)
+    hidden_count = len(entries) - len(visible)
     if list_only:
-        print(f"论文清单（content/publications/index.xml）：共 {len(entries)} 篇，下一篇编号 {len(entries) + 1}\n")
+        print(f"论文清单（content/publications/index.xml）：共 {len(entries)} 篇"
+              f"（可见 {len(visible)}，隐藏 {hidden_count}），下一篇编号 {len(entries) + 1}\n")
         print(f"  {'#':>3}  {'file':<38}  title")
         for n, e in enumerate(entries, 1):
             title = e["title"] or "(未填标题)"
             if len(title) > 58:
                 title = title[:55] + "..."
-            print(f"  {n:>3}  {e['file']:<38}  {title}")
+            flag = "  [hidden]" if e["hidden"] else ""
+            print(f"  {n:>3}  {e['file']:<38}  {title}{flag}")
         print("\n新增论文：复制 _template.xml → 改名 → 在清单末尾加一行 <paper .../>")
         return
     warnings = validate(site, papers, projects)
@@ -541,8 +546,8 @@ def build(*, check_only: bool = False, list_only: bool = False) -> None:
     robots = f"User-agent: *\nAllow: /\n\nSitemap: {url}sitemap.xml\n"
 
     xml_count = len([p for p in CONTENT.rglob("*.xml") if not p.name.startswith("_")])
-    print(f"✓ 数据源：{xml_count} 个 XML，{len(papers)} 篇论文"
-          f"（清单 index.xml，下一篇编号 {len(papers) + 1}），"
+    print(f"✓ 数据源：{xml_count} 个 XML，{len(papers)} 篇可见论文"
+          f"（清单共 {len(entries)} 篇，隐藏 {hidden_count}，下一篇编号 {len(entries) + 1}），"
           f"{len(site.findall('filters/filter'))} 个筛选标签")
     filled = sum(1 for p in papers if field(p, "authors"))
     if filled < len(papers):
